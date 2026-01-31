@@ -43,5 +43,3 @@ You will need the following API keys:
 *   **Data**: Results are saved locally to `./data/scout_latest.json` (also supports AWS S3 upload if configured).
 *   **Vector DB**: Historical embeddings are stored in `./data/chroma_db_v3`.
 
-## License
-MIT
