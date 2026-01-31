@@ -2,8 +2,6 @@
 
 An autonomous "Risk Intelligence" agent that monitors portfolio assets, compares them to historical market crashes, and generates strategic risk assessments.
 
-![Dashboard Preview](dashboard_preview.png)
-
 ## What It Does
 1.  **The Scout (Eyes)**: Searches the web (via SerpApi) for material news about your holdings (e.g., "CEO selling shares", "Regulatory probe").
 2.  **The Historian (Memory)**: Uses a Vector Database (ChromaDB) to compare today's news against 5+ major historical market events (e.g., Dotcom Bubble, 2008 Crisis).
