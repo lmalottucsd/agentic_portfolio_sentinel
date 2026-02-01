@@ -11,7 +11,9 @@ st.set_page_config(
 )
 
 # Load Data
-DATA_PATH = os.path.join("data", "scout_latest.json")
+# Construct absolute path to data, independent of where the command is run from
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+DATA_PATH = os.path.join(BASE_DIR, "data", "scout_latest.json")
 
 def load_data():
     if not os.path.exists(DATA_PATH):
@@ -76,7 +78,7 @@ for i, ticker in enumerate(tickers):
         try:
             import pandas as pd
             # Load cached data
-            price_file = os.path.join("data", f"prices_{ticker}.json")
+            price_file = os.path.join(BASE_DIR, "data", f"prices_{ticker}.json")
             if os.path.exists(price_file):
                 st.caption("**Everything that happened since the last briefing, summarized:**")
                 with open(price_file, "r") as f:
