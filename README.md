@@ -2,11 +2,9 @@
 
 An autonomous "Risk Intelligence" agent that monitors portfolio assets, compares them to historical market crashes, and generates strategic risk assessments.
 
-![Dashboard Preview](dashboard_preview.png)
-
 ## What It Does
 1.  **The Scout (Eyes)**: Searches the web (via SerpApi) for material news about your holdings (e.g., "CEO selling shares", "Regulatory probe").
-2.  **The Historian (Memory)**: Uses a Vector Database (ChromaDB) to compare today's news against 5+ major historical market events (e.g., Dotcom Bubble, 2008 Crisis).
+2.  **The Historian (Memory)**: Uses a Vector Database (ChromaDB) to compare today's news against market events (e.g., Dotcom Bubble, 2008 Crisis).
 3.  **The Advisor (Brain)**: An LLM-based "Chief Risk Officer" synthesizes the news and history to output a strategic verdict (Red/Yellow/Green) and an action plan.
 
 ## Setup Requirements
@@ -45,5 +43,3 @@ You will need the following API keys:
 *   **Data**: Results are saved locally to `./data/scout_latest.json` (also supports AWS S3 upload if configured).
 *   **Vector DB**: Historical embeddings are stored in `./data/chroma_db_v3`.
 
-## License
-MIT
